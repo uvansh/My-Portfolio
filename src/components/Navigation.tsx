@@ -34,7 +34,7 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 backdrop-blur-xs bg-opacity-70 bg-black z-50">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          <span className="text-xl font-bold text-primary animate-color-change">Portfolio.</span>
+          <span className="text-xl font-bold text-primary animate-color-change">.devPortfolio</span>
           <div className="flex space-x-8">
             {['home', 'projects', 'skills', 'contact'].map((section) => (
               <button

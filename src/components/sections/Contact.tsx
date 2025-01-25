@@ -21,7 +21,7 @@ const Contact = () => {
   return (
     <section id="contact" className="min-h-screen py-20">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-white mb-12 text-center">Get in Touch</h2>
+        <h2 className="text-4xl font-bold text-white mb-12 text-center underline-offset-4 underline">Get in Touch</h2>
         <div className="max-w-2xl mx-auto">
           <form onSubmit={handleSubmit} className="space-y-6 animate-fade-in">
             <div>
