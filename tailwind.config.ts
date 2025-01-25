@@ -25,15 +25,15 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#0f172a",
+          DEFAULT: "#000000",
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#0d9488",
+          DEFAULT: "#0EA5E9",
           foreground: "#ffffff",
         },
         accent: {
-          DEFAULT: "#64748b",
+          DEFAULT: "#333333",
           foreground: "#ffffff",
         },
       },
@@ -46,10 +46,24 @@ export default {
           "0%": { opacity: "0", transform: "translateX(10px)" },
           "100%": { opacity: "1", transform: "translateX(0)" },
         },
+        "typewriter": {
+          "0%": { width: "0%" },
+          "100%": { width: "100%" },
+        },
+        "color-change": {
+          "0%": { color: "#000000" },
+          "50%": { color: "#0EA5E9" },
+          "100%": { color: "#000000" },
+        }
       },
       animation: {
         "fade-in": "fade-in 0.5s ease-out",
         "fade-in-right": "fade-in-right 0.5s ease-out",
+        "typewriter": "typewriter 2s steps(40, end)",
+        "color-change": "color-change 3s infinite",
+      },
+      backdropBlur: {
+        xs: '2px',
       },
     },
   },
