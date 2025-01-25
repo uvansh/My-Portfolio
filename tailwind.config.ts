@@ -29,7 +29,7 @@ export default {
           foreground: "#000000",
         },
         secondary: {
-          DEFAULT: "#0EA5E9",
+          DEFAULT: "#403E43",
           foreground: "#ffffff",
         },
         accent: {
@@ -52,7 +52,7 @@ export default {
         },
         "color-change": {
           "0%": { color: "#000000" },
-          "50%": { color: "#0EA5E9" },
+          "50%": { color: "#8A898C" },
           "100%": { color: "#000000" },
         }
       },
