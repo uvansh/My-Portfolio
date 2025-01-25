@@ -1,3 +1,6 @@
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
+
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
