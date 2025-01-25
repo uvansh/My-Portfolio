@@ -13,7 +13,7 @@ const Projects = () => {
       image: "/placeholder.svg"
     },
     {
-      title: "X clone",
+      title: "X",
       description: "A brief description of project 3",
       tech: ["Vue", "Express", "PostgreSQL"],
       image: "/placeholder.svg"
