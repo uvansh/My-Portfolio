@@ -2,7 +2,7 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Frontend",
-      skills: ["React", "TypeScript", "Tailwind CSS", "Next.js", "HTML/CSS"]
+      skills: ["React", "Tailwind CSS", "HTML/CSS" ,"TypeScript", "Next.js"]
     },
     {
       title: "Backend",
@@ -35,8 +35,8 @@ const Skills = () => {
                       <div 
                         className="bg-white h-2.5 rounded-full"
                         style={{ 
-                          width: `${85 - skillIndex * 10}%`,
-                          transition: 'width 1s ease-in-out'
+                          width: `${90 - skillIndex * 6}%`,
+                          transition: 'width 2s ease-in-out'
                         }}
                       ></div>
                     </div>

@@ -51,21 +51,31 @@ export default {
           "100%": { width: "100%" },
         },
         "color-change": {
-          "0%": { color: "#000000" },
-          "50%": { color: "#8A898C" },
-          "100%": { color: "#000000" },
-        }
+          "0%": { color: "lightblue" },
+          "50%": { color: "white" },
+          "100%": { color: "lightblue" },
+        },
+        "border-color-change": {
+          "0%": { borderColor: "pink" },
+          "50%": { borderColor: "purple" },
+          "100%": { borderColor: "pink" },
+          },
+          "rotate": {
+            "0%": { transform: "rotate(0deg)" },
+            "100%": { transform: "rotate(360deg)" },
+          },
+        },
       },
       animation: {
         "fade-in": "fade-in 0.5s ease-out",
-        "fade-in-right": "fade-in-right 0.5s ease-out",
-        "typewriter": "typewriter 2s steps(40, end)",
+        "fade-in-right": "fade-in-right 1s ease-out",
+        "typewriter": "typewriter 2s steps(50, end)",
         "color-change": "color-change 3s infinite",
+        "border-color-change": "border-color-change 3s infinite",
       },
       backdropBlur: {
         xs: '2px',
       },
     },
-  },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;

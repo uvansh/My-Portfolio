@@ -1,19 +1,19 @@
 const Projects = () => {
   const projects = [
     {
-      title: "Project 1",
+      title: "Student management system",
       description: "A brief description of project 1",
       tech: ["React", "TypeScript", "Tailwind"],
       image: "/placeholder.svg"
     },
     {
-      title: "Project 2",
+      title: "AI summarizer",
       description: "A brief description of project 2",
       tech: ["Next.js", "Node.js", "MongoDB"],
       image: "/placeholder.svg"
     },
     {
-      title: "Project 3",
+      title: "X clone",
       description: "A brief description of project 3",
       tech: ["Vue", "Express", "PostgreSQL"],
       image: "/placeholder.svg"
@@ -23,7 +23,7 @@ const Projects = () => {
   return (
     <section id="projects" className="min-h-screen py-20">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-white mb-12 text-center animate-color-change">Projects</h2>
+        <h2 className="text-4xl font-bold text-white mb-12 text-center">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div 

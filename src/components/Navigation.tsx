@@ -31,10 +31,10 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
+    <nav className="fixed top-0 left-0 right-0 backdrop-blur-md bg-opacity-20 bg-black z-50">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          <span className="text-xl font-bold text-primary animate-color-change">Portfolio</span>
+          <span className="text-xl font-bold text-primary animate-color-change">Portfolio.</span>
           <div className="flex space-x-8">
             {['home', 'projects', 'skills', 'contact'].map((section) => (
               <button
@@ -43,7 +43,7 @@ const Navigation = () => {
                 className={`capitalize rounded-full px-4 py-1 transition-colors ${
                   activeSection === section
                     ? 'text-white bg-secondary'
-                    : 'text-gray-600 hover:text-secondary'
+                    : 'text-gray-200 hover:text-gray-400'
                 }`}
               >
                 {section}
