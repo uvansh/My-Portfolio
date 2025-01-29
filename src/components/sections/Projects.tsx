@@ -3,20 +3,23 @@ const Projects = () => {
     {
       title: "Student management system",
       description: "A brief description of project 1",
-      tech: ["React", "TypeScript", "Tailwind"],
-      image: "/placeholder.svg"
+      tech: ["Flask", "Python", "Bootstrap"],
+      image: "/src/images/project-2.png",
+      linktoweb:"https://student-attendance-production-4b34.up.railway.app/"
     },
     {
       title: "AI summarizer",
       description: "A brief description of project 2",
       tech: ["Next.js", "Node.js", "MongoDB"],
-      image: "/placeholder.svg"
+      image: "/src/images/project-1.png",
+      linktoweb:"#"
     },
     {
       title: "X clone",
       description: "A brief description of project 3",
-      tech: ["Vue", "Express", "PostgreSQL"],
-      image: "/placeholder.svg"
+      tech: ["React", "Express", "PostgreSQL","MongoDB"],
+      image: "/placeholder.svg",
+      linktoweb:"#"
     }
   ];
 
@@ -33,7 +36,11 @@ const Projects = () => {
             >
               <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-white">{project.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-white">{project.title}
+                <a href={project.linktoweb} className="bg-white text-black px-3 ml-3 py-1 rounded-full text-sm hover:bg-white/90">
+                    View
+                  </a>
+                </h3>
                 <p className="text-gray-300 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech, techIndex) => (
@@ -44,6 +51,7 @@ const Projects = () => {
                       {tech}
                     </span>
                   ))}
+                  
                 </div>
               </div>
             </div>
