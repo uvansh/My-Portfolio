@@ -17,14 +17,11 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-        },
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+        }, 
       );
 
       toast({
