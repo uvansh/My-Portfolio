@@ -1,13 +1,6 @@
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
-import emailjs from '@emailjs/browser';
-
-// Create a separate configuration object
-const emailConfig = {
-  serviceId: '', // You'll need to enter this when testing locally
-  templateId: '', // You'll need to enter this when testing locally
-  publicKey: '', // You'll need to enter this when testing locally
-};
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -20,37 +13,28 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Validate if credentials are set
-    if (!emailConfig.serviceId || !emailConfig.templateId || !emailConfig.publicKey) {
-      toast({
-        title: "Configuration Error",
-        description: "Email service is not properly configured.",
-        variant: "destructive",
-      });
-      return;
-    }
-
     setIsSubmitting(true);
 
     try {
-      await emailjs.send(
-        emailConfig.serviceId,
-        emailConfig.templateId,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
+      // Call the Edge Function to send emails and store data
+      const { data, error } = await supabase.functions.invoke('send-contact-notification', {
+        body: {
+          name: formData.name,
+          email: formData.email,
           message: formData.message,
         },
-        emailConfig.publicKey
-      );
+      });
+
+      if (error) throw error;
 
       toast({
         title: "Message sent!",
         description: "Thank you for reaching out. I'll get back to you soon.",
       });
+      
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
+      console.error('Error sending message:', error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again later.",
