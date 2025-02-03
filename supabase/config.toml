@@ -1,0 +1,10 @@
+project_id = "cybqfnirsyynolgqfgkd"
+
+[api]
+enabled = true
+url = "https://cybqfnirsyynolgqfgkd.supabase.co"
+service_role_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5YnFmbmlyc3l5bm9sZ3FmZ2tkIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczNzc5NzQyMywiZXhwIjoyMDUzMzczNDIzfQ.Oi8GzPtXVGXPEJVeVPGFNQZvPPkXBGQdqHHPvQQvuKs"
+
+[functions]
+[functions.send-contact-notification]
+verify_jwt = false

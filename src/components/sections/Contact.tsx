@@ -1,6 +1,6 @@
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
-import emailjs from '@emailjs/browser';
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -17,19 +17,24 @@ const Contact = () => {
 
     try {
       await emailjs.send(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-        }, 
+        },
+        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
       );
 
       toast({
         title: "Message sent!",
         description: "Thank you for reaching out. I'll get back to you soon.",
       });
+      
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
+      console.error('Error sending message:', error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again later.",
