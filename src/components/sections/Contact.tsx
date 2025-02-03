@@ -31,6 +31,7 @@ const Contact = () => {
               <input
                 type="text"
                 id="name"
+                autoComplete="additional-name webauthn"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 className="w-full px-4 py-2 bg-secondary text-white border border-gray-600 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent"
@@ -44,6 +45,7 @@ const Contact = () => {
               <input
                 type="email"
                 id="email"
+                autoComplete="email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="w-full px-4 py-2 bg-secondary text-white border border-gray-600 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent"

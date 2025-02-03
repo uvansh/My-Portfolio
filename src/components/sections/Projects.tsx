@@ -1,24 +1,28 @@
+import project2 from "/src/images/project2.png"
+import project1 from "/src/images/project1.png"
+import placeholder from '/placeholder.svg'
+
 const Projects = () => {
   const projects = [
     {
       title: "Student management system",
       description: "A brief description of project 1",
-      tech: ["Flask", "Python", "Bootstrap"],
-      image: "/src/images/project-2.png",
+      tech: ["Flask", "Python", "Bootstrap","HTML","SQLite"],
+      image: project2,
       linktoweb:"https://student-attendance-production-4b34.up.railway.app/"
     },
     {
       title: "AI summarizer",
       description: "A brief description of project 2",
-      tech: ["Next.js", "Node.js", "MongoDB"],
-      image: "/src/images/project-1.png",
+      tech: ["Python","Flask","Tensor-Flow","Beautiful Soupe","MongoDB","Bootstrap"],
+      image: project1,
       linktoweb:"#"
     },
     {
       title: "X clone",
       description: "A brief description of project 3",
       tech: ["React", "Express", "PostgreSQL","MongoDB"],
-      image: "/placeholder.svg",
+      image: placeholder,
       linktoweb:"#"
     }
   ];
