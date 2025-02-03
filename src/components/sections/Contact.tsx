@@ -2,6 +2,13 @@ import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
 
+// Create a separate configuration object
+const emailConfig = {
+  serviceId: '', // You'll need to enter this when testing locally
+  templateId: '', // You'll need to enter this when testing locally
+  publicKey: '', // You'll need to enter this when testing locally
+};
+
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -13,18 +20,29 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate if credentials are set
+    if (!emailConfig.serviceId || !emailConfig.templateId || !emailConfig.publicKey) {
+      toast({
+        title: "Configuration Error",
+        description: "Email service is not properly configured.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
       await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        emailConfig.serviceId,
+        emailConfig.templateId,
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
         },
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+        emailConfig.publicKey
       );
 
       toast({
