@@ -67,3 +67,38 @@ Simply open [Lovable](https://lovable.dev/projects/06324ec2-20d6-47cd-8179-5bfd8
 ## I want to use a custom domain - is that possible?
 
 We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+
+## Setting up EmailJS for the Contact Form
+
+This project uses EmailJS to send contact form submissions directly to your email inbox. Follow these steps to set it up:
+
+1. Create an account at [EmailJS](https://www.emailjs.com/)
+2. Set up an Email Service:
+   - Go to the EmailJS dashboard
+   - Click on "Email Services" in the left sidebar
+   - Click "Add New Service"
+   - Choose your email provider (Gmail, Outlook, etc.)
+   - Follow the instructions to connect your email account
+
+3. Create an email template:
+   - Go to "Email Templates" in the left sidebar
+   - Click "Create New Template"
+   - Design your template with the following variables:
+     - `{{user_name}}` - The sender's name
+     - `{{user_email}}` - The sender's email
+     - `{{message}}` - The message content
+   - Save your template
+
+4. Get your credentials:
+   - Service ID: Found in the "Email Services" section
+   - Template ID: Found in the "Email Templates" section
+   - Public Key: Found in the "Account" section under "API Keys"
+
+5. Add your credentials to the `.env.local` file:
+   ```
+   NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+   NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+   NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+   ```
+
+6. Restart your development server for the changes to take effect

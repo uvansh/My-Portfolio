@@ -17,7 +17,7 @@ const Skills = () => {
   return (
     <section id="skills" className="min-h-screen py-20">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-white mb-12 text-center underline-offset-4 underline">Skills</h2>
+        <h2 className="text-4xl font-bold mb-12 text-center text-black bg-white rounded-lg p-2 mx-auto w-fit animate-fade-in">Skills</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
             <div 

@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import avatar from '/src/images/avatar-white.jpg';
+
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState('home');
 
@@ -33,8 +35,8 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 backdrop-blur-xs bg-opacity-70 bg-black z-50">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          <span className="text-xl font-bold text-primary animate-color-change">.dev | Vansh Uttam</span>
-            <div className="flex space-x-8">
+          <div><img src={avatar} alt="avatar" className='w-12 h-12 rounded-full' /></div>
+            <div className="flex space-x-4 lg:space-x-6">
             {['home', 'projects', 'skills', 'contact'].map((section) => (
               <button
                 key={section}
