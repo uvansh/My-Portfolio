@@ -11,7 +11,7 @@ const Home = () => {
           <p className="lg:text-2xl font-semibold md:text-xl text-lg mt-5 text-neutral-200 mb-8 animate-fade-in">
             Full Stack Developer & Web Technology Enthusiast
           </p>
-          <p className="lg:text-2xl md:text-xl text-md text-gray-240 mb-5 animate-fade-in" style={{ animationDelay: '300ms' }}>
+          <p className="lg:text-xl text-lg  text-gray-240 mb-5 animate-fade-in" style={{ animationDelay: '300ms' }}>
             I create beautiful, functional, and user-friendly digital experiences. <br />I love to explore new technologies and build new projects
           </p>
           <button

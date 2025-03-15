@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import avatar from '/src/images/avatar-new.png';
+import avatar from '/src/images/avatar-white.jpg';
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState('home');
