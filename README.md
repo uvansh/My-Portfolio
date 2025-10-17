@@ -1,4 +1,6 @@
 
+# This is my portfolio website where you can find projects and contact info.
+
 **Use your preferred IDE**
 
 If you want to work locally using your own IDE, you can clone this repo and push changes.
